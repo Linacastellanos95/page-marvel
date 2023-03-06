@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+    --padding-container: 100px 0;
+    --color-title: #4e6591;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+    position: center;
+}
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-width: 800px;
+    position: -ms-page;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #fff;
+
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 170%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #00000070 0%, #00000067 100%), url('../images/histories.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 47% 100%, 0 80%);
+    z-index: -1;
+}
+
+/* NAV*/
+.nav{
+    --padding-container:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__title{
+    font-weight: 400px;
+}
+
+.nav__link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav__items{
+    list-style: none;
+}
+
+.nav__links{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img{
+    display: block;
+    width: 30px;
+}
+
+.nav__close{
+    display: var(--show, none);
+}
+
+/* HERO CONTAINER*/
+
+.hero__container{
+    max-width: 800px;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero__title{
+    font-size: 3rem;
+}
+
+.hero__paragraph{
+    margin-bottom: 20px;
+}
+
+.cta{
+   display: inline-block;
+   background-color: #f9202be1;
+   justify-self: center;
+   color: #fff;
+   text-decoration: none;
+   padding: 13px 30px;
+   border-radius: 32px;
+}
+
+/*ABOUT*/
+
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about__paragraph{
+    line-height: 1.7;
+}
+
+.about__main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto)) ;
+}
+
+.about__icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about__icon{
+    width: 40px;
+}
+
+/*KNOWLEDGE*/
+
+.knowledge {
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    overflow: hidden;
+}
+
+.knowledge__container{
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 2em;
+}
+
+.knowledge__paragraph{
+    line-height: 1.5;
+    margin-bottom: 200;
+}
+
+.knowledge__picture{
+    max-width: 400px;
+}
+
+.knowledge__img{
+    width: 100%;
+    display: block;
+}
+
+/*CHARACTER*/
+
+.character{
+    background-color: #e5e5f7;
+}
+.character__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+
+.character__body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.character__body--show{
+   pointer-events: unset;
+   opacity: 1;
+   transition: opacity 1.5s ease-in-out; 
+}
+
+.character__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.character__texts{
+    max-width: 700px;
+}
+
+.character__course{
+    background-color: rgb(225, 65, 65);
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}
+
+.character__arrow{
+    width: 80%;
+    cursor: pointer;
+}
+
